@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function AppRouter() {
   return (
-    <div>
-      AI Manufacturing Incident Assistant
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h1>Dashboard</h1>} />
+        <Route path="/login" element={<h1>Login</h1>} />
+        <Route path="/register" element={<h1>Register</h1>} />
+        <Route path="/incidents" element={<h1>Incidents</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
