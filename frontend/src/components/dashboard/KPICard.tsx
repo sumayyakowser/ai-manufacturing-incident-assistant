@@ -1,32 +1,17 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-interface KPICardProps {
+interface Props {
   title: string;
-  value: number;
+  value: string;
 }
 
-const KPICard = ({ title, value }: KPICardProps) => {
+const KPICard = ({ title, value }: Props) => {
   return (
-    <Card
-      sx={{
-        borderRadius: 3,
-        height: 120,
-      }}
-    >
+    <Card elevation={3}>
       <CardContent>
-        <Typography
-          color="text.secondary"
-          gutterBottom
-        >
-          {title}
-        </Typography>
+        <Typography color="text.secondary">{title}</Typography>
 
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-        >
-          {value}
-        </Typography>
+        <Typography variant="h4">{value}</Typography>
       </CardContent>
     </Card>
   );

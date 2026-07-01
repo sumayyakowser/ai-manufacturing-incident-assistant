@@ -2,30 +2,38 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  IconButton,
-  Avatar,
   Box,
+  Avatar,
+  IconButton,
 } from "@mui/material";
 
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
+const drawerWidth = 240;
+
 const Header = () => {
   return (
-    <AppBar position="static" elevation={1}>
+  <AppBar
+  position="fixed"
+  elevation={1}
+  sx={{
+    width: `calc(100% - ${drawerWidth}px)`,
+    ml: `${drawerWidth}px`,
+    zIndex: (theme) => theme.zIndex.drawer + 1,
+  }}
+>
       <Toolbar>
-
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           AI Manufacturing Incident Assistant
         </Typography>
 
-        <IconButton color="inherit">
-          <NotificationsIcon />
-        </IconButton>
+        <Box display="flex" alignItems="center" gap={2}>
+          <IconButton color="inherit">
+            <NotificationsIcon />
+          </IconButton>
 
-        <Box ml={2}>
           <Avatar>S</Avatar>
         </Box>
-
       </Toolbar>
     </AppBar>
   );
