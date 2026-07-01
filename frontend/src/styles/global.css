@@ -18,3 +18,62 @@ a{
 button{
   cursor:pointer;
 }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6fa;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 64px;
+  background: #1f2937;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.layout-body {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background: white;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  padding: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.footer {
+  height: 50px;
+  background: #1f2937;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
