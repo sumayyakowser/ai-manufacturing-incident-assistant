@@ -1,12 +1,33 @@
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Avatar,
+  Box,
+} from "@mui/material";
+
+import NotificationsIcon from "@mui/icons-material/Notifications";
+
 const Header = () => {
   return (
-    <header className="header">
-      <h2>AI Manufacturing Incident Assistant</h2>
+    <AppBar position="static" elevation={1}>
+      <Toolbar>
 
-      <div className="user-info">
-        Welcome, Admin
-      </div>
-    </header>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          AI Manufacturing Incident Assistant
+        </Typography>
+
+        <IconButton color="inherit">
+          <NotificationsIcon />
+        </IconButton>
+
+        <Box ml={2}>
+          <Avatar>S</Avatar>
+        </Box>
+
+      </Toolbar>
+    </AppBar>
   );
 };
 

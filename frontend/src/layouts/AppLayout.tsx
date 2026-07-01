@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import Header from "../components/layout/Header";
 import Sidebar from "../components/layout/Sidebar";
 import Footer from "../components/layout/Footer";
@@ -8,19 +9,23 @@ interface Props {
 
 const AppLayout = ({ children }: Props) => {
   return (
-    <div className="app-layout">
-      <Header />
+    <Box display="flex">
 
-      <div className="layout-body">
-        <Sidebar />
+      <Sidebar />
 
-        <main className="main-content">
+      <Box sx={{ flexGrow: 1 }}>
+
+        <Header />
+
+        <Box p={4}>
           {children}
-        </main>
-      </div>
+        </Box>
 
-      <Footer />
-    </div>
+        <Footer />
+
+      </Box>
+
+    </Box>
   );
 };
 
